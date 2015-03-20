@@ -11,7 +11,10 @@
 input, textarea {
     border: none;
     
+    overflow: hidden;
+    
     color: #000;
+    font-family: "Helvetica", "Microsoft JhengHei", "Noto Sans";
     font-size: 16px;
 }
 

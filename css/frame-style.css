@@ -10,15 +10,15 @@
 
 @font-face {
     font-family: Noto Sans;
-    src: url(../src/NotoSansCJKtc-Regular.otf);
+    src: url(../src/NotoSansCJKtc-Light.otf);
 }
 
 body {
     margin-top: 5em;
 }
 
-body, input, textarea {
-    font-family: "Helvetica", "Droid Sans Fallback", "微軟正黑體", "Noto Sans";
+html {
+    font-family: "Helvetica", "Microsoft JhengHei", "Noto Sans";
 }
 
 header {
