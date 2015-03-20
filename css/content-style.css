@@ -1,0 +1,108 @@
+/*  selector order:
+ *      element first,
+ *      class second,
+ *      id third,
+ *      @media last.
+ *  each part ordered by first letter.
+ */
+
+@charset "UTF-8";
+
+input, textarea {
+    border: none;
+    
+    color: #000;
+    font-size: 16px;
+}
+
+.poster-container {
+    position: relative;
+    margin: 0 auto;
+    
+    width: 960px;
+    height: 540px;
+}
+
+#experience-box {
+    position: absolute;
+    top: 430px;
+    
+    width: inherit;
+    height: 110px;
+    
+    background-image: url(../src/poster-brand.png);
+    background-size: cover;
+}
+
+#experience-box input {
+    margin-left: 239px;
+    
+    width: 690px;
+    line-height: 20px;
+    
+    text-align: right;
+}
+
+#experience-box input:first-child {
+    margin-top: 12px;
+}
+
+#poster-background {
+    position: relative;
+    
+    width: inherit;
+    height: 430px;
+    
+    overflow: hidden;
+    
+    background-image: url("../src/transparent.png");
+    background-repeat: repeat;
+}
+
+#poster-info {
+    position: absolute;
+    top: 230px;
+    left: 432px;
+    
+    width: 288px;
+    height: 128px;
+    padding: 16px;
+    
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#poster-info textarea {
+    width: inherit;
+    height: inherit;
+        
+    resize: none;
+    background-color: transparent;
+}
+
+#poster-location {
+    position: absolute;
+    top: 390px;
+    left: 765px;
+    
+    width: 158px;
+    line-height: 38px;
+    
+    text-align: center;
+    background-color: transparent;
+}
+
+#poster-profile {
+    position: absolute;
+    top: 230px;
+    left: 765px;
+    
+    width: 150px;
+    height: 150px;
+    border: 5px solid;
+    border-color: #FFF;
+    
+    overflow: hidden;
+    
+    background-image: url("../src/transparent.png");
+    background-repeat: repeat;
+}

@@ -1,0 +1,16 @@
+div {
+    width: 1024px;
+}
+
+img {
+    width: 512px;
+}
+
+#uploadPreview {
+	position:absolute;
+ 	padding-top:100px;
+ 	padding-left:10px;
+ 	padding-right:10px;
+ 	width:1000px;
+ 	overflow:hidden;
+}

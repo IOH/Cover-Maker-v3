@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        
+        <title>IOH Cover Maker</title>
+        
+<!--  favicon  -->
+        <link rel="icon" href="src/favicon.png">
+        
+<!--  style sheet  -->
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+        <link rel="stylesheet" type="text/css" href="css/frame-style.css">
+        <link rel="stylesheet" type="text/css" href="css/content-style.css">
+        
+<!--  javascript  -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+        <script type="text/javascript" src="js/posterPreview.js"></script>
+    </head>
+    
+<!--  body  -->
+    <body>
+        
+<!--  header  -->
+        <header>
+            <div class="container clearfix">
+                <div class="left" id="title">IOH</div>
+                <div class="left" id="subtitle">Cover Maker</div>
+                <div class="left">▼</div>
+                
+                <div class="right"></div>
+            </div>
+        </header>
+        
+        <div class="container">
+
+<!--  preview area  -->
+            <div class="poster-container">
+                <div id="poster-background">
+                    <img id="img-background" src="">
+                </div>
+                <div id="poster-profile">
+                    <img id="img-profile" src="">
+                </div>
+                <div id="poster-info">
+                    <textarea placeholder="希望提供一個跨國、跨領域的公開經驗交流分享平台，邀請在海外讀書工作的學子，當台灣同學的耳與目，以影片與文字的方式， 分享在國外學習、工作的所見所聞以及就讀與申請的經驗給所有的台灣朋友， 讓他們有勇氣與智慧去追逐自己的夢想，為了他們自己，也為了我們台灣的未來。"></textarea>
+                </div>
+                <input id="poster-location" type="text" placeholder="地點：請輸入地點">
+                <div id="experience-box">
+                    <input type="text" placeholder="點擊輸入姓名">
+                    <input type="text" placeholder="輸入學經歷 如：MIT Media Lab, Master of Science Media Arts and Science 碩士, 20xx">
+                    <input type="text" placeholder="學經歷">
+                    <input type="text" placeholder="學經歷">
+                </div>
+            </div>
+        
+<!--  data enter  -->
+            <div>
+                <input type="file" id="upload-background" accept="image/*">
+                <br>
+                <input type="file" id="upload-profile" accept="image/*">
+                <br>
+                <button id="click2">click2</button>
+            </div>
+        </div>
+    </body>
+</html>

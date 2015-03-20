@@ -1,0 +1,77 @@
+/*  selector order:
+ *      element first,
+ *      class second,
+ *      id third,
+ *      @media last.
+ *  each part ordered by first letter.
+ */
+
+@charset "UTF-8";
+
+@font-face {
+    font-family: Noto Sans;
+    src: url(../src/NotoSansCJKtc-Regular.otf);
+}
+
+body {
+    margin-top: 5em;
+}
+
+body, input, textarea {
+    font-family: "Helvetica", "Droid Sans Fallback", "微軟正黑體", "Noto Sans";
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    z-index: 999;
+    
+    line-height: 4em;
+    
+    color: #FFF;
+    background-color: #f44336;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.clearfix:after {
+    clear: both;
+    content: " ";
+    display: block;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+#title {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+#subtitle {
+    font-size: 2em;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 64em) and (max-width: 100em) {
+    .container {
+        max-width: 72em;
+    }
+}
+
+@media screen and (min-width: 100em) {
+    .container {
+        max-width: 84em;
+    }
+}
