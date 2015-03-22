@@ -21,7 +21,7 @@ $(document).ready(function() {
         };
     }
     
-    // renew image & makes it draggable while upload
+    // renew image & makes it draggable while uploaded
     $("#upload-background").change(function(e) {
         var $id = $("#img-background");
         $.when(readImg(this.files[0], $id)).then(function() {
@@ -40,13 +40,18 @@ $(document).ready(function() {
         });
     });
     
+    // make sure info box align with profile picture & text
     $("#poster-info").resizable({grid: [16, 16]})
                      .draggable({
                          containment: "#poster-background",
                          grid: [16, 16]
                      });
     
-    $("#click2").click(function() {
-        $("#poster-profile, #poster-location").css("left", "25px");
+    // change position of profile picture
+    $("#click-left").click(function() {
+        $("#poster-profile, #poster-location").css("left", "32px");
+    });
+    $("#click-right").click(function() {
+        $("#poster-profile, #poster-location").css("left", "768px");
     });
 });

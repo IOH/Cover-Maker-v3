@@ -65,7 +65,7 @@ input, textarea {
 #poster-info {
     position: absolute;
     top: 230px;
-    left: 432px;
+    right: 208px;
     
     width: 288px;
     height: 128px;
@@ -97,7 +97,7 @@ input, textarea {
 #poster-profile {
     position: absolute;
     top: 230px;
-    left: 765px;
+    left: 768px;
     
     width: 150px;
     height: 150px;
