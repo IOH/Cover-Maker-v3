@@ -18,6 +18,15 @@ input, textarea {
     font-size: 16px;
 }
 
+.experience-text {
+    margin-left: 239px;
+    
+    width: 690px;
+    line-height: 20px;
+    
+    text-align: right;
+}
+
 .poster-container {
     position: relative;
     margin: 0 auto;
@@ -26,24 +35,19 @@ input, textarea {
     height: 540px;
 }
 
+.text-red {
+	margin-top: 0;
+}
+
 #experience-box {
     position: absolute;
     top: 430px;
     
     width: inherit;
     height: 110px;
-    
+	
     background-image: url(../src/poster-brand.png);
     background-size: cover;
-}
-
-#experience-box input {
-    margin-left: 239px;
-    
-    width: 690px;
-    line-height: 20px;
-    
-    text-align: right;
 }
 
 #experience-box input:first-child {

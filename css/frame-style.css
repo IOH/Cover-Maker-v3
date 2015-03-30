@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: Noto Sans;
-    src: url(../src/NotoSansCJKtc-Light.otf);
+    src: url("../src/NotoSansCJKtc-Light.otf") format("otf");
 }
 
 body {
@@ -65,14 +65,14 @@ header {
     border-radius: 1.6em;
 }
 
-#title {
-    font-size: 3em;
-    font-weight: 700;
-}
-
 #subtitle {
     font-size: 2em;
     font-weight: 400;
+}
+
+#title {
+    font-size: 3em;
+    font-weight: 700;
 }
 
 @media screen and (min-width: 64em) and (max-width: 100em) {

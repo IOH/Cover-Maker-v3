@@ -55,10 +55,13 @@
                 </div>
                 <input id="poster-location" type="text" placeholder="地點：請輸入地點">
                 <div id="experience-box">
-                    <input type="text" placeholder="點擊輸入姓名">
-                    <input type="text" placeholder="輸入學經歷 如：MIT Media Lab, Master of Science Media Arts and Science 碩士, 20xx">
-                    <input type="text" placeholder="學經歷">
-                    <input type="text" placeholder="學經歷">
+                    <input class="experience-text" type="text" placeholder="點擊輸入姓名">
+                    <input class="experience-text" type="text" placeholder="輸入學經歷 如：MIT Media Lab, Master of Science Media Arts and Science 碩士, 20xx">
+					<input class="text-red" name="text-red" value="1" type="radio">
+                    <input class="experience-text" type="text" placeholder="點擊輸入學經歷">
+					<input class="text-red" name="text-red" value="3" type="radio">
+                    <input class="experience-text" type="text" placeholder="點擊輸入學經歷">
+					<input class="text-red" name="text-red" value="5" type="radio">
                 </div>
             </div>
         
@@ -67,8 +70,10 @@
                 選擇背景圖片：<input class="upload-img" name="background" type="file" accept="image/*"><br>
                 選擇大頭貼照：<input class="upload-img" name="profile" type="file" accept="image/*"><br>
                 大頭貼位置：
-                <button id="click-left">左側</button>
-                <button id="click-right">右側</button>
+                <button class="profile-position" value="left">左側</button>
+                <button class="profile-position" value="right">右側</button>
+                <button class="profile-position" value="none">不顯示</button><br>
+				<button id="export-poster">輸出海報！</button>
             </div>
         </div>
     </body>

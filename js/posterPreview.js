@@ -40,7 +40,7 @@ $(document).ready(function() {
 
         img.onload = function() {
 
-            // resize image to fit container & draggable
+            // resize image to fit container, draggable & zoomable
             if ((img.naturalWidth / img.naturalHeight) > (size.Width / size.Height)) {
                 $id.css({"width": "100%", "height": ""})
                    .css({"top": 0.5 * (size.Height - $id.height()), "left": 0})
@@ -61,7 +61,7 @@ $(document).ready(function() {
 
     // update image & make it draggable
     $(".upload-img").change(function(e) {
-        var name = $(this).attr("name");
+        var name = this.name;
         readImg(this.files[0], name);
         resetImg(name);
     });
@@ -74,29 +74,41 @@ $(document).ready(function() {
                      });
     
     // change position of profile image
-    $("#click-left").click(function() {
-        $("#poster-profile, #poster-location").css("left", "32px");
+    $(".profile-position").click(function() {
+		switch (this.value) {
+			case "left":
+				$("#poster-profile, #poster-location").show().css("left", "32px");
+				break;
+			case "right":
+				$("#poster-profile, #poster-location").show().css("left", "768px");
+				break;
+			case "none":
+				$("#poster-profile").hide();
+				break;
+		}        
     });
-    $("#click-right").click(function() {
-        $("#poster-profile, #poster-location").css("left", "768px");
-    });
-    
-    // under is texting code for zooming image
+	
+	// export result
+	$("#export-poster").click(function() {
+		$(".text-red").hide();
+		alert("敬請期待！");
+	});
+	
+    // image zooming
+	// still not accurate, needs modify!!
     $.fn.imgZoom = function() {
         var img = this.get(0);
         
         function MouseWheel(e) {
-            var delta = (e.wheelDelta > 0)? 0.05 : -0.05,
-                deltaW = delta * this.width,
+            var delta = (e.wheelDelta || e.detail) > 0? 0.05 : -0.05, // IE9 up, Chrome, Safari, Opera || Firefox
+				deltaW = delta * this.width,
                 deltaH = delta * this.height,
-                mouseX = e.offsetX,
-                mouseY = e.offsetY,
+                mouseX = e.offsetX || e.layerX, // Others || Firefox
+                mouseY = e.offsetY || e.layerY,
                 imgX = $(this).offset().left,
                 imgY = $(this).offset().top;
 
-            window.event.preventDefault();
-            
-            console.log(this.height / this.width);
+            e.preventDefault();
             
             $(this).width(this.width + deltaW);
             $(this).height(this.height + deltaH);
