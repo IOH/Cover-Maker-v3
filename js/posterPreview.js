@@ -87,10 +87,24 @@ $(document).ready(function() {
 				break;
 		}        
     });
+    
+    // change selected experience-text color to red
+    $("input[name=text-red]").change(function() {
+        var index = $("input[name=text-red]:checked").val(),
+            selector = ".experience-text:eq(" + index + ")";
+        
+        $(selector).css("color", "#F00");
+        $(".experience-text:not(" + selector + ")").css("color", "#000");
+    });
+    
+    // change poster-location color
+    $(".location-color").click(function() {
+        $("#poster-location").css("color", this.value);
+    });
 	
 	// export result
 	$("#export-poster").click(function() {
-		$(".text-red").hide();
+		$("input[name=text-red]:radio").hide();
 		alert("敬請期待！");
 	});
 	
