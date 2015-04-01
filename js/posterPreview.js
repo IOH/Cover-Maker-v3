@@ -58,6 +58,19 @@ $(document).ready(function() {
             }
         };
     }
+	
+	function textRed() {
+        var index = $("input[name=text-red]:checked").val(),
+            selector = ".experience-text:eq(" + index + ")";
+        
+        $(selector).css("color", "#F00");
+        $(".experience-text:not(" + selector + ")").css("color", "#000");
+    }
+	
+	// initialize
+	resetImg("background");
+	resetImg("profile");
+	textRed();
 
     // update image & make it draggable
     $(".upload-img").change(function(e) {
@@ -90,12 +103,8 @@ $(document).ready(function() {
     
     // change selected experience-text color to red
     $("input[name=text-red]").change(function() {
-        var index = $("input[name=text-red]:checked").val(),
-            selector = ".experience-text:eq(" + index + ")";
-        
-        $(selector).css("color", "#F00");
-        $(".experience-text:not(" + selector + ")").css("color", "#000");
-    });
+		textRed();
+	});
     
     // change poster-location color
     $(".location-color").click(function() {

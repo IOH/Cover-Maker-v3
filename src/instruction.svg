@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="960"
+   height="430"
+   viewBox="0 0 960.00001 430.00001"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r"
+   inkscape:export-filename="/home/hunsin/git/Cover-Maker-v3/src/instruction.png"
+   inkscape:export-xdpi="180"
+   inkscape:export-ydpi="180"
+   sodipodi:docname="introduction.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="462.67153"
+     inkscape:cy="188.70295"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1366"
+     inkscape:window-height="708"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-622.36216)">
+    <rect
+       style="opacity:1;fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4184"
+       width="960"
+       height="430"
+       x="0"
+       y="622.36218" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:'Noto Sans CJK TC';-inkscape-font-specification:'Noto Sans CJK TC';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="750.30469"
+       y="826.36212"
+       id="text4148"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4150"
+         x="750.30469"
+         y="826.36212">大頭貼也可以縮放噢～</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:'Noto Sans CJK TC';-inkscape-font-specification:'Noto Sans CJK TC';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="69.748764"
+       y="853.27649"
+       id="text4136"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4138"
+         x="69.748764"
+         y="853.27649">滾動滑鼠滾輪縮放大小</tspan></text>
+    <path
+       sodipodi:type="star"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4142"
+       sodipodi:sides="3"
+       sodipodi:cx="219.63158"
+       sodipodi:cy="786.42892"
+       sodipodi:r1="46.188023"
+       sodipodi:r2="23.094011"
+       sodipodi:arg1="0.52359878"
+       sodipodi:arg2="1.5707963"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 259.63158,809.52291 -80,0 40,-69.28204 z"
+       inkscape:transform-center-y="-11.547021" />
+    <path
+       inkscape:transform-center-y="11.546992"
+       d="m 766.08274,945.52293 -169.30831,0 84.65416,-146.6253 z"
+       inkscape:randomized="0"
+       inkscape:rounded="0"
+       inkscape:flatsided="true"
+       sodipodi:arg2="1.5707963"
+       sodipodi:arg1="0.52359878"
+       sodipodi:r2="48.875099"
+       sodipodi:r1="97.750198"
+       sodipodi:cy="896.64783"
+       sodipodi:cx="681.42859"
+       sodipodi:sides="3"
+       id="path4144"
+       style="opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:16;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:type="star"
+       transform="matrix(0.23625539,-0.40920633,0.40920633,0.23625539,-308.27357,965.21703)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;line-height:125%;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="821.42859"
+       y="840.93359"
+       id="text4156"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4158"
+         x="821.42859"
+         y="840.93359" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="835.44629"
+       y="851.18347"
+       id="text4160"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4162"
+         x="835.44629"
+         y="851.18347">↓</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:'Noto Sans CJK TC';-inkscape-font-specification:'Noto Sans CJK TC';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="510"
+       y="800.89337"
+       id="text4164"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4166"
+         x="510"
+         y="800.89337">點擊輸入文字，還可</tspan><tspan
+         sodipodi:role="line"
+         x="510"
+         y="825.89337"
+         id="tspan4182">以移動位置、調大小</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4168"
+       y="851.18347"
+       x="587.44629"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:Roboto;-inkscape-font-specification:Roboto;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       xml:space="preserve"><tspan
+         y="851.18347"
+         x="587.44629"
+         id="tspan4170"
+         sodipodi:role="line">↓</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:125%;font-family:'Noto Sans CJK TC';-inkscape-font-specification:'Noto Sans CJK TC';letter-spacing:0px;word-spacing:0px;writing-mode:tb-rl;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;"
+       x="944.11719"
+       y="848.07642"
+       id="text4172"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4174"
+         x="846.07642"
+         y="946.11719">點圓圈選擇標示<tspan
+   style="fill:#ff0000"
+   id="tspan4186">紅字</tspan>↓</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:'Noto Sans CJK TC';-inkscape-font-specification:'Noto Sans CJK TC';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="10.000005"
+       y="1039.505"
+       id="text4188"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4190"
+         x="10.000005"
+         y="1039.505">↓下面的按鈕上傳照片↓</tspan></text>
+  </g>
+</svg>
