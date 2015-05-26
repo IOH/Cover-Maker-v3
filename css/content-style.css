@@ -35,6 +35,10 @@ input, textarea {
     height: 540px;
 }
 
+.poster-container img {
+	position: relative;
+}
+
 .text-red {
 	margin-top: 0;
 }
