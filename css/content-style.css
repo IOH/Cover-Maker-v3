@@ -37,6 +37,8 @@ input, textarea {
 
 .poster-container img {
 	position: relative;
+	
+	height: auto;
 }
 
 .text-red {

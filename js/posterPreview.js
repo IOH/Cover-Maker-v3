@@ -5,7 +5,10 @@ $(document).ready(function() {
 
 // img position, initial scale
 	var imgTop,
-		imgLeft;
+		imgLeft,
+		imgWidth,
+		hmBackground = new Hammer.Manager(document.querySelector("#img-background")),
+		hmProfile = new Hammer.Manager(document.querySelector("#img-profile"));
 
 // return the container size
 	function containerSize(name) {
@@ -62,24 +65,28 @@ $(document).ready(function() {
     }
 
 // pan listener
-	function imgPan(e) {
+	function imgPan(e) {		
 		if (e.type == "panstart") {
-			
 		// update new position
-			imgTop = $(this).position().top;
-			imgLeft = $(this).position().left;
+			imgTop = e.target.offsetTop;
+			imgLeft = e.target.offsetLeft;
 		}
 		else {
-			$(this).css({"top": imgTop + e.gesture.deltaY,
-					 "left": imgLeft + e.gesture.deltaX});
+			e.target.style.left = imgLeft + e.deltaX + "px";
+			e.target.style.top = imgTop + e.deltaY + "px";
 		}
 	}
 
 // pinch listener
 	function imgPinch(e) {
-		console.log(e.scale);
-		$(this).width(this.width * e.scale)
-			   .height("auto");
+		if (e.type == "pinchstart") {
+			imgWidth = e.target.width;
+		}
+		else {
+			console.dir(e);
+			$(e.target).width(imgWidth * e.scale)
+					   .height("auto");
+		}
 	}
 
 // change selected text to red
@@ -96,8 +103,16 @@ $(document).ready(function() {
 	imgReset("profile");
 	textRed();
 	
-	$("#img-background, #img-profile").hammer({threshold: 0, pointers: 0}).on("panstart panmove", imgPan);
-	$("#img-background, #img-profile").hammer().on("pinchstart pinchmove", imgPinch);
+// hammer pan, pinch event
+	hmBackground.add(new Hammer.Pan({threshold: 0, pointers: 0}));
+	hmBackground.add(new Hammer.Pinch({threshold: 0})).recognizeWith(hmBackground.get("pan"));
+	hmProfile.add(new Hammer.Pan({threshold: 0, pointers: 0}));
+	hmProfile.add(new Hammer.Pinch({threshold: 0})).recognizeWith(hmProfile.get("pan"));
+	
+	hmBackground.on("panstart panmove", imgPan);
+	hmBackground.on("pinchstart pinchmove", imgPinch);
+	hmProfile.on("panstart panmove", imgPan);
+	hmProfile.on("pinchstart pinchmove", imgPinch);
 
 // img mousewheel listener, img zooming
 	$("#img-background, #img-profile").mousewheel(function(e) {
