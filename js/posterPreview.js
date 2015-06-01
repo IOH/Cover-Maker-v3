@@ -3,7 +3,7 @@
 
 $(document).ready(function() {
 
-// img position
+// img position, initial scale
 	var imgTop,
 		imgLeft;
 
@@ -61,16 +61,25 @@ $(document).ready(function() {
         };
     }
 
-// panmove listener
+// pan listener
 	function imgPan(e) {
-		$(this).css({"top": imgTop + e.gesture.deltaY,
+		if (e.type == "panstart") {
+			
+		// update new position
+			imgTop = $(this).position().top;
+			imgLeft = $(this).position().left;
+		}
+		else {
+			$(this).css({"top": imgTop + e.gesture.deltaY,
 					 "left": imgLeft + e.gesture.deltaX});
+		}
 	}
 
-// panstart listener
-	function startPan() {
-		imgTop = $(this).position().top;
-		imgLeft = $(this).position().left;
+// pinch listener
+	function imgPinch(e) {
+		console.log(e.scale);
+		$(this).width(this.width * e.scale)
+			   .height("auto");
 	}
 
 // change selected text to red
@@ -87,8 +96,8 @@ $(document).ready(function() {
 	imgReset("profile");
 	textRed();
 	
-	$("#img-background, #img-profile").hammer().on("panstart", startPan);
-	$("#img-background, #img-profile").hammer({threshold: 2, pointers: 0}).on("panmove", imgPan);
+	$("#img-background, #img-profile").hammer({threshold: 0, pointers: 0}).on("panstart panmove", imgPan);
+	$("#img-background, #img-profile").hammer().on("pinchstart pinchmove", imgPinch);
 
 // img mousewheel listener, img zooming
 	$("#img-background, #img-profile").mousewheel(function(e) {
@@ -103,7 +112,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		
 		$(this).width(this.width + deltaW)
-			   .height(this.width * (this.naturalHeight / this.naturalWidth))
+			   .height("auto")
 			   .offset({
 				   top: imgY - (deltaW * (this.naturalHeight / this.naturalWidth)) * mouseY / this.height,
 				   left: imgX - deltaW * mouseX / this.width
