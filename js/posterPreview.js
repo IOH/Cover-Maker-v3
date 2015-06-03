@@ -66,7 +66,7 @@ $(document).ready(function() {
 
 // pan listener
 	function imgPan(e) {		
-		if (e.type == "panstart") {
+		if (e.type === "panstart") {
 		// update new position
 			imgTop = e.target.offsetTop;
 			imgLeft = e.target.offsetLeft;
@@ -79,11 +79,10 @@ $(document).ready(function() {
 
 // pinch listener
 	function imgPinch(e) {
-		if (e.type == "pinchstart") {
+		if (e.type === "pinchstart") {
 			imgWidth = e.target.width;
 		}
 		else {
-			console.dir(e);
 			$(e.target).width(imgWidth * e.scale)
 					   .height("auto");
 		}
@@ -101,7 +100,6 @@ $(document).ready(function() {
 // initialize
 	imgReset("background");
 	imgReset("profile");
-	textRed();
 	
 // hammer pan, pinch event
 	hmBackground.add(new Hammer.Pan({threshold: 0, pointers: 0}));
@@ -161,11 +159,6 @@ $(document).ready(function() {
 				$("#poster-profile").hide();
 				break;
 		}
-	});
-
-// change selected experience-text color to red
-	$("input[name=text-red]").change(function() {
-		textRed();
 	});
 
 // change poster-location color

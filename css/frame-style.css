@@ -13,6 +13,10 @@
     src: url("../src/NotoSansCJKtc-Light.otf") format("otf");
 }
 
+* {
+	box-sizing: border-box;
+}
+
 body {
     margin-top: 5em;
 }
