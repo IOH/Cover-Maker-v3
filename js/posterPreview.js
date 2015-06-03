@@ -87,15 +87,6 @@ $(document).ready(function() {
 					   .height("auto");
 		}
 	}
-
-// change selected text to red
-	function textRed() {
-        var index = $("input[name=text-red]:checked").val(),
-            selector = ".experience-text:eq(" + index + ")";
-
-        $(selector).css("color", "#F00");
-        $(".experience-text:not(" + selector + ")").css("color", "#000");
-    }
 	
 // initialize
 	imgReset("background");
@@ -121,9 +112,9 @@ $(document).ready(function() {
 			mouseY = e.offsetY,
 			imgX = $(this).offset().left,
 			imgY = $(this).offset().top;
-		
+
 		e.preventDefault();
-		
+
 		$(this).width(this.width + deltaW)
 			   .height("auto")
 			   .offset({
@@ -133,11 +124,11 @@ $(document).ready(function() {
 	});
 
 // update image & make it draggable
-    $(".upload-img").change(function(e) {
-        var name = this.name;
-        imgRead(this.files[0], name);
-        imgReset(name);
-    });
+	$(".upload-img").change(function(e) {
+		var name = this.name;
+		imgRead(this.files[0], name);
+		imgReset(name);
+	});
     
 // info box resizable, draggable & align with profile image
 //	$("#poster-info").resizable({grid: [16, 24]})
