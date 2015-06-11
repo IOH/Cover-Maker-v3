@@ -10,14 +10,12 @@
         <link rel="shortcut icon" href="src/favicon.ico">
         
 <!--  style sheet  -->
-        <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
         <link rel="stylesheet" type="text/css" href="css/frame-style.css">
         <link rel="stylesheet" type="text/css" href="css/content-style.css">
         
 <!--  javascript  -->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script type="text/javascript" src="js/hammer.min.js"></script>
-		<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
         <script type="text/javascript" src="js/posterPreview.js"></script>
     </head>
     
@@ -41,43 +39,62 @@
         </header>
         
         <div class="container">
+			<form>
 
 <!--  preview area  -->
-            <div class="poster-container">
-                <div id="poster-background">
-                    <img id="img-background" src="src/instruction.png">
-                </div>
-                <div id="poster-profile">
-                    <img id="img-profile" src="">
-                </div>
-                <div id="poster-info">
-                    <textarea placeholder="希望提供一個跨國、跨領域的公開經驗交流分享平台，邀請在海外讀書工作的學子，當台灣同學的耳與目，以影片與文字的方式， 分享在國外學習、工作的所見所聞以及就讀與申請的經驗給所有的台灣朋友， 讓他們有勇氣與智慧去追逐自己的夢想，為了他們自己，也為了我們台灣的未來。"></textarea>
-                </div>
-                <input id="poster-location" type="text" placeholder="地點：請輸入地點">
-                <div id="experience-box">
-                    <div class="experience-text">莊智超</div>
-					<input class="text-red" name="text-red" value="1" type="radio" checked>
-                    <input class="experience-text" type="text" placeholder="輸入學經歷 如：MIT Media Lab, Master of Science Media Arts and Science 碩士, 20xx">
-					<input class="text-red" name="text-red" value="2" type="radio">
-                    <input class="experience-text" type="text" placeholder="點擊輸入學經歷">
-					<input class="text-red" name="text-red" value="3" type="radio">
-                    <input class="experience-text" type="text" placeholder="點擊輸入學經歷">
-                </div>
-            </div>
-        
+				<div class="poster-container">
+					<div id="poster-background">
+						<img id="img-background" src="src/instruction.png">
+					</div>
+					<div id="poster-profile">
+						<img id="img-profile" src="">
+					</div>
+					<div id="poster-info">
+						<textarea name="info" placeholder="希望提供一個跨國、跨領域的公開經驗交流分享平台，邀請在海外讀書工作的學子，當台灣同學的耳與目，以影片與文字的方式， 分享在國外學習、工作的所見所聞以及就讀與申請的經驗給所有的台灣朋友，讓他們有勇氣與智慧去追逐自己的夢想，為了他們自己，也為了我們台灣的未來。"></textarea>
+					</div>
+					<input id="poster-location" name="location" type="text" placeholder="地點：請輸入地點">
+					<div id="experience-box">
+						<input class="experience-text" name="fullname" type="text" value="莊智超" readonly>
+						<input class="text-red" name="text_red" type="radio" value="0" checked>
+						<input class="experience-text" name="experience[]" type="text" placeholder="輸入學經歷 如：MIT Media Lab, Master of Science Media Arts and Science 碩士, 20xx">
+						<input class="text-red" name="text_red" type="radio" value="1">
+						<input class="experience-text" name="experience[]" type="text" placeholder="點擊輸入學經歷">
+						<input class="text-red" name="text_red" type="radio" value="2">
+						<input class="experience-text" name="experience[]" type="text" placeholder="點擊輸入學經歷">
+					</div>
+				</div>
+			
+<!--  invisible part  -->
+				<input class="invisible" id="background-top" name="back_top" type="number">
+				<input class="invisible" id="background-left" name="back_left" type="number">
+				<input class="invisible" id="background-width" name="back_width" type="number">
+				<input class="invisible" id="profile-top" name="pro_top" type="number">
+				<input class="invisible" id="profile-left" name="pro_left" type="number">
+				<input class="invisible" id="profile-width" name="pro_width" type="number">
+				<input class="invisible" id="info-top" name="info_top" type="number">
+				<input class="invisible" id="info-left" name="info_left" type="number">
+				<input class="invisible" id="info-width" name="info_width" type="number">
+				<input class="invisible" id="info-height" name="info_height" type="number">
+
 <!--  data enter  -->
-            <div>
-                選擇背景圖片：<input class="upload-img" name="background" type="file" accept="image/*"><br>
-                選擇大頭貼照：<input class="upload-img" name="profile" type="file" accept="image/*"><br>
-                大頭貼位置：
-                <button class="profile-position" value="left">左側</button>
-                <button class="profile-position" value="right">右側</button>
-                <button class="profile-position" value="none">不顯示</button><br>
-                地點文字顏色：
-                <button class="location-color" value="#FFF">白色</button>
-                <button class="location-color" value="#000">黑色</button><br>
-				<button id="export-poster">輸出海報！</button>
-            </div>
+				<div>
+					選擇背景圖片：<input class="upload-img" name="background" type="file" accept="image/*"><br>
+					選擇大頭貼照：<input class="upload-img" name="profile" type="file" accept="image/*"><br>
+					大頭貼位置：<br>
+					<input id="position-left" name="pro_position" type="radio" value="left">
+					<label for="position-left">左側</label><br>
+					<input id="position-right" name="pro_position" type="radio" value="right">
+					<label for="position-right">右側</label><br>
+					<input id="position-none" name="pro_position" type="radio" value="none">
+					<label for="position-none">不顯示</label><br>
+					地點文字顏色：<br>
+					<input id="color-white" name="location_color" type="radio" value="#FFF">
+					<label for="color-white">白色</label><br>
+					<input id="color-black" name="location_color" type="radio" value="#000">
+					<label for="color-black">黑色</label><br>
+					<input id="export-poster" type="submit" value="輸出海報！">
+				</div>
+			</form>
         </div>
     </body>
 </html>

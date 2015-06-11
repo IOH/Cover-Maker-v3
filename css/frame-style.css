@@ -50,6 +50,10 @@ header {
     display: block;
 }
 
+.invisible {
+	display: none;
+}
+
 .left {
     float: left;
 }
