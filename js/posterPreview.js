@@ -80,7 +80,7 @@ $(document).ready(function() {
 			"height": "auto"
 		}).css({
 			"top": Number($(getIdbyImg(target, "#") + "-top").val()) - (center.y - Number($(getIdbyImg(target, "#") + "-top").val())) * (scale - 1),
-			"left": Number($(getIdbyImg(target, "#") + "-left").val()) - (center.x - Number($(getIdbyImg(target, "#") + "-left").val())) * (scale - 1),
+			"left": Number($(getIdbyImg(target, "#") + "-left").val()) - (center.x - Number($(getIdbyImg(target, "#") + "-left").val())) * (scale - 1)
 		});
 	}
 	
