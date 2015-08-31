@@ -35,6 +35,43 @@ input, textarea {
 	margin-right: 30px;
 }
 
+.info-size-controller {
+	position: absolute;
+	
+	width: 12px;
+	height: 12px;
+	
+	background-color: #666;
+}
+
+.info-size-controller:nth-of-type(1) {
+	top: 0;
+	left: 0;
+	
+	cursor: nw-resize;
+}
+
+.info-size-controller:nth-of-type(2) {
+	top: 0;
+	right: 0;
+	
+	cursor: ne-resize;
+}
+
+.info-size-controller:nth-of-type(3) {
+	right: 0;
+	bottom: 0;
+	
+	cursor: se-resize;
+}
+
+.info-size-controller:nth-of-type(4) {
+	left: 0;
+	bottom: 0;
+	
+	cursor: sw-resize;
+}
+
 .poster-container {
     position: relative;
     margin: 0 auto;
@@ -92,25 +129,23 @@ input.text-red:checked + .experience-text {
 
 #poster-info {
     position: absolute;
-    top: 230px;
-    right: 208px;
+    top: 224px;
+    left: 472px;
     
-    width: 272px;
-    height: 160px;
-    padding: 8px;
-    
-    background-color: rgba(255, 255, 255, 0.4);
+    width: 284px;
+    height: 172px;
 }
 
 #poster-info textarea {
-	padding: 0;
+	padding: 8px;
+	margin: 6px;
 	
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
     line-height: 24px;
     
     resize: none;
-    background-color: transparent;
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 #poster-location {

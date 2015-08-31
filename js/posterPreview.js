@@ -7,8 +7,8 @@ $(document).ready(function() {
 // img position, initial scale
 	var imgBackground = document.querySelector("#img-background"),
 		imgProfile = document.querySelector("#img-profile"),
-		hmBackground = new Hammer.Manager(document.querySelector("#img-background")),
-		hmProfile = new Hammer.Manager(document.querySelector("#img-profile"));
+		hmBackground = new Hammer.Manager(imgBackground),
+		hmProfile = new Hammer.Manager(imgProfile);
 	
 // get different element's id from image
 	function getIdbyImg(target, text) {
@@ -90,8 +90,8 @@ $(document).ready(function() {
 			x: e.offsetX,
 			y: e.offsetY
 		};
-		e.scale = (e.wheelDelta > 0)? 1.05 : (1 / 1.05);
-		
+		e.scale = ((e.wheelDelta || e.detail) > 0)? 1.05 : (1 / 1.05); // others || firefox
+
 		e.preventDefault();
 		imgResize(e.target, e.center, e.scale);
 		inputsUpdate(e.target);
@@ -99,7 +99,7 @@ $(document).ready(function() {
 	
 // pan listener
 	function onPan(e) {
-		if(e.type === "panend") {
+		if (e.type === "panend") {
 			inputsUpdate(e.target);
 		}
 		else {
